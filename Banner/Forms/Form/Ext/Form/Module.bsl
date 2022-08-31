@@ -16,9 +16,9 @@ EndProcedure
 &AtClient
 Procedure UpdateDiscount()
 
-	If Discount = 0 Then
+	If Not Discount Then
 		Items.Discount.Visible = False;
-		DetachIdleHandler("UpdateDiscount");
+		DetachIdleHandler("UpdateDiscоunt");
 	Else
 		Discount = Discount - 1;
 	EndIf;
@@ -29,6 +29,6 @@ EndProcedure // UpdateDiscount()
 
 &AtClient
 Procedure BuyNow(Command)
-	// TODO Insert handler
+	// TODO: Insert handler
 EndProcedure
 
